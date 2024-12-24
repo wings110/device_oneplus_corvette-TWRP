@@ -145,6 +145,8 @@ SOONG_CONFIG_ufsbsg_ufsframework := bsg
 PRODUCT_EXTRA_RECOVERY_KEYS += \
     $(DEVICE_PATH)/security/otacert
 
+# Copy modules for depmod
+# PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*.ko,$(DEVICE_PATH)/twrp/recovery/root/vendor/lib/modules,$(TARGET_COPY_OUT_RECOVERY)/root/vendor/lib/modules)
 
 # System AVB
 BOARD_AVB_VBMETA_SYSTEM := system
